@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<title>Book Library</title>
-
-<link rel="stylesheet" href="../styles/styles.css">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <title>BookNook | Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
-
-<body class="container mt-4">
-
-<h1 class="title-font">Romance Library 💕</h1>
-
-<input id="searchInput" class="form-control mb-3" placeholder="Search books">
-
-<button id="sortBtn" class="btn btn-secondary mb-3">
-Sort A-Z
-</button>
-
-<a href="session.html" class="btn btn-outline-dark mb-3">
-View Session Data
-</a>
-
-<div id="bookList" class="row"></div>
-
-<script src="../scripts/app.js"></script>
-
+<body>
+    <div class="container mt-5">
+        <h1 class="border-bottom pb-2">Your Romance Library</h1>
+        <table class="table table-hover mt-4">
+            <thead class="table-danger">
+                <tr><th>Title</th><th>Author</th><th>Series</th></tr>
+            </thead>
+            <tbody id="library-table-body">
+                </tbody>
+        </table>
+        <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+    </div>
+    <script type="module">
+        import { romanceBooks } from '../assets/data.js';
+        const body = document.getElementById('library-table-body');
+        romanceBooks.forEach(b => {
+            body.innerHTML += `<tr><td>${b.title}</td><td>${b.author}</td><td>${b.series}</td></tr>`;
+        });
+    </script>
 </body>
-
 </html>
