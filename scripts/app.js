@@ -1,18 +1,18 @@
 import { romanceBooks } from '../assets/data.js';
 
-// 1. Make the function PUBLIC so HTML onclick can see it
+
 window.showBookDetails = (id) => {
     const book = romanceBooks.find(b => b.id === id);
     if (!book) return;
 
-    // Fill the modal with data
+  
     document.getElementById('modalBookTitle').innerText = book.title;
     document.getElementById('modalAuthor').innerText = `By ${book.author}`;
     document.getElementById('modalDescription').innerText = book.description;
     document.getElementById('modalStars').innerText = book.stars;
     document.getElementById('modalImage').src = book.image;
     
-    // Open the modal using Bootstrap's built-in command
+  
     const modalElement = document.getElementById('bookModal');
     const bModal = new bootstrap.Modal(modalElement);
     bModal.show();
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookDisplay = document.getElementById('book-display');
     const searchBar = document.getElementById('search-bar');
 
-    // 2. Function to build the book cards
+   
     const renderBooks = (data) => {
         bookDisplay.innerHTML = '';
         data.forEach(book => {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // 3. Live Search Logic
+    
     searchBar.addEventListener('input', (e) => {
         const term = e.target.value.toLowerCase();
         const filtered = romanceBooks.filter(b => 
@@ -51,6 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderBooks(filtered);
     });
 
-    // Initial render
+    
     renderBooks(romanceBooks);
 });
