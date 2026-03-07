@@ -1,18 +1,5 @@
-:root {
-    --romance-pink: #f8d7da;
-    --deep-red: #842029;
-}
-
-.bg-romance { background-color: var(--deep-red) !important; }
-.bg-soft-pink { background-color: var(--romance-pink); }
-
-.card {
-    transition: transform 0.2s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-}
-
-body { font-family: 'Georgia', serif; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fcfcfc; }
+.bg-romance { background-color: #842029 !important; } /* Deep Ruby */
+.card-title { color: #842029; font-weight: bold; }
+.badge { background-color: #f8d7da; color: #842029; }
+.hero-section { background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://www.transparenttextures.com/patterns/paper-fibers.png'); }
