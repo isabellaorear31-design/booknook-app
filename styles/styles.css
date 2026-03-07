@@ -1,55 +1,104 @@
+
 :root {
-    --pink-primary: #ff85a2;
-    --pink-light: #fce4ec;
-    --pink-dark: #f06292;
+    --pink-main: #ff85a2;
+    --pink-hover: #ff5c8d;
+    --pink-bg: #fff0f3;
+    --white: #ffffff;
 }
 
 body {
-    background-color: #fff5f8;
+    background-color: var(--pink-bg);
     font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
 }
 
-.bg-romance { background-color: var(--pink-primary) !important; }
-.text-pink { color: var(--pink-dark); font-weight: bold; }
-.bg-cute-pink { background-color: var(--pink-primary); }
 
-.card {
-    border: 2px solid var(--pink-light) !important;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: 0.3s;
+.bg-romance {
+    background-color: var(--pink-main) !important;
 }
 
-.card:hover {
-    transform: scale(1.03);
-    border-color: var(--pink-primary) !important;
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.btn-danger {
-    background-color: var(--pink-dark);
-    border: none;
+
+.text-pink {
+    color: var(--pink-main);
 }
+
+.text-pink-bold {
+    color: var(--pink-hover);
+    font-weight: 600;
+}
+
 
 .clickable-card {
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
+    overflow: hidden;
     transition: all 0.3s ease;
+    background-color: var(--white);
 }
 
 .clickable-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(255, 133, 162, 0.3) !important;
-    border-color: #ff85a2 !important;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 133, 162, 0.2) !important;
+}
+
+.card-img-top {
+    border-bottom: 2px solid var(--pink-bg);
+    transition: transform 0.5s ease;
+}
+
+.clickable-card:hover .card-img-top {
+    transform: scale(1.05);
 }
 
 
+.btn-danger {
+    background-color: var(--pink-main) !important;
+    border: none !important;
+}
+
+.btn-danger:hover {
+    background-color: var(--pink-hover) !important;
+}
+
 .btn-pink-outline {
-    color: #ff85a2;
-    border: 1px solid #ff85a2;
-    border-radius: 20px;
-    background: white;
+    border: 2px solid var(--pink-main);
+    color: var(--pink-main);
+    border-radius: 50px;
+    transition: 0.3s;
 }
 
 .btn-pink-outline:hover {
-    background: #ff85a2;
+    background-color: var(--pink-main);
     color: white;
+}
+
+
+.bg-cute-pink {
+    background-color: var(--pink-main);
+}
+
+.italic-style {
+    font-style: italic;
+    line-height: 1.6;
+}
+
+
+.login-page {
+    background: linear-gradient(135deg, #ff85a2 0%, #fff0f3 100%);
+}
+
+.login-card {
+    border-radius: 25px;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-color: var(--pink-main);
+    box-shadow: 0 0 0 0.25rem rgba(255, 133, 162, 0.25);
 }
