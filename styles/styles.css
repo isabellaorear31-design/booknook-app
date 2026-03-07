@@ -1,66 +1,18 @@
-body{
-background-color:#fff0f6;
-font-family:'Quicksand', sans-serif;
-margin:0;
-text-align:center;
+:root {
+    --romance-pink: #f8d7da;
+    --deep-red: #842029;
 }
 
-header{
-background:#ff9ecf;
-padding:25px;
-color:white;
+.bg-romance { background-color: var(--deep-red) !important; }
+.bg-soft-pink { background-color: var(--romance-pink); }
+
+.card {
+    transition: transform 0.2s ease-in-out;
 }
 
-header h1{
-font-family:'Pacifico', cursive;
-font-size:42px;
-margin:0;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
-header p{
-margin-top:8px;
-}
-
-.search-container{
-margin:30px;
-}
-
-input{
-padding:10px;
-border-radius:12px;
-border:1px solid #ff9ecf;
-width:250px;
-}
-
-button{
-padding:10px 16px;
-border:none;
-border-radius:12px;
-background:#ff6fa9;
-color:white;
-cursor:pointer;
-}
-
-button:hover{
-background:#ff4f96;
-}
-
-#bookResults{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-padding:20px;
-}
-
-.book-card{
-background:white;
-padding:20px;
-width:200px;
-border-radius:16px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.book-card h3{
-color:#ff4f96;
-}
+body { font-family: 'Georgia', serif; }
