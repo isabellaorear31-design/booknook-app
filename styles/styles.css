@@ -1,62 +1,66 @@
 body{
-
 background-color:#fff0f6;
 font-family:'Quicksand', sans-serif;
-
+margin:0;
+text-align:center;
 }
 
-.logo-font{
-
-font-family:'Playfair Display', serif;
-font-size:24px;
-
-}
-
-.title-font{
-
-font-family:'Playfair Display', serif;
-color:#c2185b;
-
-}
-
-.tagline{
-
-font-size:18px;
-color:#6a1b4d;
-
-}
-
-.bg-pink{
-
-background-color:#ec407a;
-
-}
-
-.btn-main{
-
-background-color:#f06292;
-border:none;
+header{
+background:#ff9ecf;
+padding:25px;
 color:white;
-
 }
 
-.btn-main:hover{
+header h1{
+font-family:'Pacifico', cursive;
+font-size:42px;
+margin:0;
+}
 
-background-color:#ec407a;
+header p{
+margin-top:8px;
+}
 
+.search-container{
+margin:30px;
+}
+
+input{
+padding:10px;
+border-radius:12px;
+border:1px solid #ff9ecf;
+width:250px;
+}
+
+button{
+padding:10px 16px;
+border:none;
+border-radius:12px;
+background:#ff6fa9;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff4f96;
+}
+
+#bookResults{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+padding:20px;
 }
 
 .book-card{
-
-background-color:white;
-border-radius:12px;
+background:white;
+padding:20px;
+width:200px;
+border-radius:16px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
-transition:transform .2s;
-
 }
 
-.book-card:hover{
-
-transform:scale(1.03);
-
+.book-card h3{
+color:#ff4f96;
 }
