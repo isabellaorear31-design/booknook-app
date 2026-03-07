@@ -21,9 +21,20 @@
     <script>
         document.getElementById('login-form').onsubmit = (e) => {
             e.preventDefault();
-            sessionStorage.setItem("activeUser", document.getElementById('username').value);
+           const user = document.getElementById('username').value;
+        const pass = document.getElementById('password').value;
+
+        
+        if (pass.length > 0) {
+            console.log("Login Success: User '" + user + "' authenticated at " + new Date().toLocaleTimeString());
+            
+            sessionStorage.setItem("activeUser", user);
             window.location.href = "../index.html"; 
-        };
+        } else {
+         
+            console.error("Login Failure: Attempt made with empty password field.");
+        }
+    };
     </script>
 </body>
 </html>
