@@ -1,37 +1,37 @@
-import { romanceBooks } from '../assets/data.js';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNook | Romance Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-romance shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">💖 BookNook</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="pages/login.html">Login</a>
+                <a class="nav-link" href="pages/session.html">Session Data</a>
+            </div>
+        </div>
+    </nav>
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("BookNook Initialized: DOM fully loaded.");
-    const bookDisplay = document.getElementById('book-display');
-    const searchBar = document.getElementById('search-bar');
+    <header class="hero-section text-center py-5 bg-light border-bottom">
+        <h1>Find your next obsession.</h1>
+        <p class="lead">Tracking the best in romance, from Forks to Mayfair.</p>
+    </header>
 
-    const renderBooks = (data) => {
-        bookDisplay.innerHTML = '';
-        data.forEach(book => {
-            bookDisplay.innerHTML += `
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">${book.title}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">${book.author}</h6>
-                            <p class="badge bg-soft-pink text-dark">${book.series}</p>
-                            <p class="card-text small text-secondary">Published: ${book.year}</p>
-                        </div>
-                    </div>
-                </div>`;
-        });
-    };
+    <main class="container my-5">
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <input type="text" id="search-bar" class="form-control form-control-lg shadow-sm" placeholder="Search by title, author, or series...">
+            </div>
+        </div>
+        <div id="book-display" class="row g-4"></div>
+    </main>
 
-    searchBar.addEventListener('input', (e) => {
-        const term = e.target.value.toLowerCase();
-        console.log(`Searching for: ${term}`); // Debugging log for rubric
-        const filtered = romanceBooks.filter(b => 
-            b.title.toLowerCase().includes(term) || 
-            b.author.toLowerCase().includes(term) ||
-            b.series.toLowerCase().includes(term)
-        );
-        renderBooks(filtered);
-    });
-
-    renderBooks(romanceBooks);
-});
+    <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
