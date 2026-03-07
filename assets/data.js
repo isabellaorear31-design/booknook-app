@@ -1,7 +1,7 @@
 export const romanceBooks = [
     { 
         id: 1, title: "Twilight", author: "Stephenie Meyer", series: "The Twilight Saga", year: 2005, 
-        stars: "⭐⭐⭐⭐⭐", 
+        stars: "⭐⭐⭐⭐⭐",  
         description: "“The classic tale of a girl and her sparkling protector.” Bella Swan moves to Forks and encounters Edward Cullen, a mysterious boy who reveals himself to be a vampire.",
         image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1700522826i/41865.jpg"
     },
