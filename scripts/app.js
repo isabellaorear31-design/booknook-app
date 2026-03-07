@@ -3,6 +3,9 @@ import { romanceBooks } from '../assets/data.js';
 
 if (!sessionStorage.getItem("activeUser")) { 
     window.location.href = "pages/login.html";
+} else {
+    
+    console.log("Session Status: Active session found for user: " + sessionStorage.getItem("activeUser"));
 }
 
 
@@ -26,9 +29,11 @@ window.showBookDetails = (id) => {
         if (!readingList.includes(book.title)) {
             readingList.push(book.title);
             localStorage.setItem('wantToRead', JSON.stringify(readingList));
+
+            console.log("State Change: Added '" + book.title + "' to local storage list.");
         }
         statusMsg.style.display = 'block';
-        console.log("Requirement 4C: Session Update - Saved " + book.title);
+       
     };
 
     const myModal = new bootstrap.Modal(document.getElementById('bookModal'));
@@ -58,6 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchBar.addEventListener('input', (e) => {
         const term = e.target.value.toLowerCase();
+        console.log("User Input (Search): " + term);
+        
         renderBooks(romanceBooks.filter(b => 
             b.title.toLowerCase().includes(term) || 
             b.author.toLowerCase().includes(term)
