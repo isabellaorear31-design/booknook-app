@@ -5,10 +5,12 @@ if (!sessionStorage.getItem("activeUser")) {
     window.location.href = "pages/login.html";
 }
 
+
 window.showBookDetails = (id) => {
     const book = romanceBooks.find(b => b.id === id);
+    if (!book) return;
     document.getElementById('modalBookTitle').innerText = book.title;
-    document.getElementById('modalAuthor').innerText = book.author;
+    document.getElementById('modalAuthor').innerText = `By ${book.author}`;
     document.getElementById('modalDescription').innerText = book.description;
     document.getElementById('modalStars').innerText = book.stars;
     document.getElementById('modalImage').src = book.image;
@@ -26,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
         data.forEach(book => {
             bookDisplay.innerHTML += `
                 <div class="col-md-4 mb-4" onclick="showBookDetails(${book.id})">
-                    <div class="card h-100 shadow-sm clickable-card">
-                        <img src="${book.image}" class="card-img-top" style="height: 300px; object-fit: cover;">
+                    <div class="card h-100 shadow-sm clickable-card border-0">
+                        <img src="${book.image}" class="card-img-top" style="height: 350px; object-fit: cover;">
                         <div class="card-body text-center">
                             <h5 class="card-title text-pink">${book.title}</h5>
                             <p class="text-muted small">${book.author}</p>
@@ -40,7 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchBar.addEventListener('input', (e) => {
         const term = e.target.value.toLowerCase();
-        renderBooks(romanceBooks.filter(b => b.title.toLowerCase().includes(term)));
+        renderBooks(romanceBooks.filter(b => 
+            b.title.toLowerCase().includes(term) || 
+            b.author.toLowerCase().includes(term)
+        ));
     });
 
     renderBooks(romanceBooks);
