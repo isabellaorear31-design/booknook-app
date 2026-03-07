@@ -9,12 +9,28 @@ if (!sessionStorage.getItem("activeUser")) {
 window.showBookDetails = (id) => {
     const book = romanceBooks.find(b => b.id === id);
     if (!book) return;
+
     document.getElementById('modalBookTitle').innerText = book.title;
     document.getElementById('modalAuthor').innerText = `By ${book.author}`;
     document.getElementById('modalDescription').innerText = book.description;
     document.getElementById('modalStars').innerText = book.stars;
     document.getElementById('modalImage').src = book.image;
     
+    const statusMsg = document.getElementById('save-status');
+    statusMsg.style.display = 'none';
+
+    
+    const readBtn = document.getElementById('addToReadBtn');
+    readBtn.onclick = () => {
+        let readingList = JSON.parse(localStorage.getItem('wantToRead')) || [];
+        if (!readingList.includes(book.title)) {
+            readingList.push(book.title);
+            localStorage.setItem('wantToRead', JSON.stringify(readingList));
+        }
+        statusMsg.style.display = 'block';
+        console.log("Requirement 4C: Session Update - Saved " + book.title);
+    };
+
     const myModal = new bootstrap.Modal(document.getElementById('bookModal'));
     myModal.show();
 };
@@ -31,9 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="card h-100 shadow-sm clickable-card border-0">
                         <img src="${book.image}" class="card-img-top" style="height: 350px; object-fit: cover;">
                         <div class="card-body text-center">
-                            <h5 class="card-title text-pink">${book.title}</h5>
-                            <p class="text-muted small">${book.author}</p>
-                            <div>${book.stars}</div>
+                            <h5 class="card-title text-pink mb-1">${book.title}</h5>
+                            <p class="text-muted small mb-1">${book.author}</p>
+                            <div class="text-warning">${book.stars}</div>
                         </div>
                     </div>
                 </div>`;
