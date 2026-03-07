@@ -1,39 +1,36 @@
 :root {
     --cute-pink: #ff85a2;
-    --soft-blush: #fff0f3;
+    --soft-pink: #fff0f3;
 }
 
-body {
-    background-color: var(--soft-blush);
-    font-family: 'Poppins', sans-serif;
-}
+body { background-color: var(--soft-pink); font-family: 'Poppins', sans-serif; }
 
-.text-pink { color: var(--cute-pink); font-weight: 600; }
+.text-pink { color: var(--cute-pink); font-weight: bold; }
 .bg-romance { background-color: var(--cute-pink) !important; }
 
 
 .hero-section {
     background: white;
-    padding: 60px 0;
+    padding: 50px 0;
     border-bottom: 2px solid var(--cute-pink);
+    margin-bottom: 40px;
 }
+
 
 .clickable-card {
     background: white;
     border-radius: 20px;
     cursor: pointer;
-    transition: 0.3s ease;
-    border: 2px solid transparent;
+    transition: 0.3s;
+    border: none;
 }
 
 .clickable-card:hover {
     transform: translateY(-10px);
-    border-color: var(--cute-pink);
     box-shadow: 0 10px 20px rgba(255, 133, 162, 0.2) !important;
 }
 
-.login-page {
-    background: linear-gradient(135deg, #ff85a2 0%, #fff0f3 100%);
-}
-
+.login-page { background: linear-gradient(135deg, #ff85a2 0%, #fff0f3 100%); }
 .login-card { border-radius: 25px; max-width: 400px; width: 100%; }
+
+.btn-danger { background-color: var(--cute-pink) !important; border: none !important; }
