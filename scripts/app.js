@@ -15,7 +15,7 @@ window.showBookDetails = (id) => {
 
     document.getElementById('modalBookTitle').innerText = book.title;
     document.getElementById('modalAuthor').innerText = `By ${book.author}`;
-    document.getElementById('modalDescription').innerText = book.description;
+    document.getElementById('modalDescription').innerHTML = book.description;
     document.getElementById('modalStars').innerText = book.stars;
     document.getElementById('modalImage').src = book.image;
     
