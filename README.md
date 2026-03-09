@@ -28,17 +28,3 @@ As a romance book lover, I want to browse a curated collection of popular titles
 I modeled my book cards and search functionality after the **Goodreads** browsing experience. I improved the design by adding a cohesive "girly pink" aesthetic and a simplified login wall to make the experience feel more exclusive and personalized.
 
 ---
-### Code Block + Explanation
-This snippet from `scripts/app.js` demonstrates how the app handles user interaction and data flow:
-
-```javascript
-window.showBookDetails = (id) => {
-    const book = romanceBooks.find(b => b.id === id);
-    document.getElementById('modalBookTitle').innerText = book.title;
-    document.getElementById('modalDescription').innerHTML = book.description;
-    document.getElementById('modalImage').src = book.image;
-    
-    const myModal = new bootstrap.Modal(document.getElementById('bookModal'));
-    myModal.show();
-};
-
