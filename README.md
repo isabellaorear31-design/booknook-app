@@ -1,4 +1,5 @@
-# 💖 BookNook
+# 💖 BookNook 
+A book discovery and tracking web app directly inspired by Goodreads.
 
 ### Authorship & Attribution 
 * **Author:** Isabella O'Rear
@@ -12,7 +13,6 @@
     * [W3Schools](https://www.w3schools.com/): Reference for CSS component styling and color hex codes.
     * [Bootstrap 5.3](https://getbootstrap.com/): Framework for responsive design.
 
----
 ---
 
 >* **Tagline:** "Tracking the best in romance, from Forks to Mayfair."
