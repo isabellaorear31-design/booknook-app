@@ -86,5 +86,4 @@ window.showBookDetails = (id) => {
 
 ### Architecture/Infrastructure
 * **Tools/Libraries:** [Bootstrap 5.3](https://getbootstrap.com/): Used for the responsive layout and grid.
- **Note:** This is a front-end app fetching internal data for `data.js` file. It uses `sessionStorage` for login and `localStorage` to save the "Want to Read" list.
-  
+ **Note:** This is a front-end app fetching internal data.
