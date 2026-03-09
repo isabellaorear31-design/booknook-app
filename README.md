@@ -42,6 +42,23 @@ window.showBookDetails = (id) => {
     document.getElementById('modalStars').innerText = book.stars;
     document.getElementById('modalImage').src = book.image;
     
+    const statusMsg = document.getElementById('save-status');
+    statusMsg.style.display = 'none';
+
+    
+    const readBtn = document.getElementById('addToReadBtn');
+    readBtn.onclick = () => {
+        let readingList = JSON.parse(localStorage.getItem('wantToRead')) || [];
+        if (!readingList.includes(book.title)) {
+            readingList.push(book.title);
+            localStorage.setItem('wantToRead', JSON.stringify(readingList));
+
+            console.log("State Change: Added '" + book.title + "' to local storage list.");
+        }
+        statusMsg.style.display = 'block';
+       
+    };
+
     const myModal = new bootstrap.Modal(document.getElementById('bookModal'));
     myModal.show();
 };
