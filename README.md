@@ -29,12 +29,12 @@ As a romance book reader, I want to browse a curated collection of popular title
 ---
 
 ### Design Pics
-![Inspiration Screenshot](./docs/inspiration.png)
+![Inspiration Screenshot](https://github.com/isabellaorear31-design/booknook-app/issues/1#issue-4046882233)
 
 ---
 
 ### Model & Inspiration Evidence
-* **Design Evidence:** [Inspiration Screenshot](./docs/inspiration.png)
+* **Design Evidence:** [Inspiration Screenshot](https://github.com/isabellaorear31-design/booknook-app/issues/1#issue-4046882233)
 I modeled my book cards and search functionality after **Goodreads**. I improved/made the design my own by adding a pink theme/romantic aesthetic and I made a login wall so that it felt more personalized. 
 
 
