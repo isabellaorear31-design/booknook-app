@@ -10,6 +10,7 @@
 * **[Codecademy](https://www.codecademy.com/):** Reference for JavaScript (JS) syntax and logic fundamentals.
 * **[W3Schools](https://www.w3schools.com/):** Used for color hex code references and CSS component styling.
 * **Library:** [Bootstrap 5.3](https://getbootstrap.com/) for responsive design.
+---
 
 > "Tracking the best in romance, from Forks to Mayfair."
 
