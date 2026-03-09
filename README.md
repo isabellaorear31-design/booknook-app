@@ -2,20 +2,23 @@
 
 ### Authorship & Attribution 
 * **Author:** Isabella O'Rear
-* **[Goodreads](https://www.goodreads.com/):** Main design inspiration for layout and primary source for all book cover images.
-* **[Google Fonts](https://fonts.google.com/):** Used for typography to create the "romance" aesthetic.
-* **[ChatGPT](https://chatgpt.com/):** Used for generating creative book summaries, one-liners, and assistance with JavaScript logic.
-* **[Microsoft Copilot](https://copilot.microsoft.com/):** Assisted with CSS formatting and troubleshooting technical code challenges.
-* **[Barry Cumbie (Bearbot)](https://github.com/barrycumbie/bearbot):** Primary reference for the project outline, folder structure, and front-end authentication patterns.
-* **[Codecademy](https://www.codecademy.com/):** Reference for JavaScript (JS) syntax and logic fundamentals.
-* **[W3Schools](https://www.w3schools.com/):** Used for color hex code references and CSS component styling.
+* **Resources:**
+    *[Goodreads](https://www.goodreads.com/):** Main design inspiration for layout and       primary source for all book cover images.
+    *[Google Fonts](https://fonts.google.com/):** Used for typography to create the          "romance" aesthetic.
+    *[ChatGPT](https://chatgpt.com/):** Used for generating creative book summaries,         one-liners, and assistance with JavaScript logic.
+    *[Microsoft Copilot](https://copilot.microsoft.com/):** Assisted with CSS
+    formatting and troubleshooting technical code challenges.
+    *[Barry Cumbie (Bearbot)](https://github.com/barrycumbie/bearbot):** Primary            reference for the project outline, folder structure, and front-end authentication       patterns.
+  *[Codecademy](https://www.codecademy.com/):** Reference for JavaScript (JS) syntax       and logic fundamentals.
+  *[W3Schools](https://www.w3schools.com/):** Used for color hex code references and       CSS component styling.
+  
 * **Library:** [Bootstrap 5.3](https://getbootstrap.com/) for responsive design.
 ---
 
-> "Tracking the best in romance, from Forks to Mayfair."
+>* **Tagline:** "Tracking the best in romance, from Forks to Mayfair."
 
 ### User Story
-As a romance book lover, I want to browse a curated collection of popular titles, search for specific authors like Stephenie Meyer, and save books I'm interested in to a "Want to Read" list so that I never forget my next obsession.
+As a romance book reader, I want to browse a curated collection of popular titles, search for specific authors, and save books I'm interested in to a "Want to Read" list so that I can easily track and remember what I wanted to read.
 
 ### Links
 * **Repository:** [GitHub Repo](https://github.com/isabellaorear31-design/booknook-app)
@@ -25,7 +28,7 @@ As a romance book lover, I want to browse a curated collection of popular titles
 ---
 
 ### Model & Inspiration Evidence
-I modeled my book cards and search functionality after the **Goodreads** browsing experience. I improved the design by adding a cohesive "girly pink" aesthetic and a simplified login wall to make the experience feel more exclusive and personalized.
+I modeled my book cards and search functionality after **Goodreads**. I improved/made the design my own by adding a pink theme/aesthetic and I made a login wall so that it felt more personalized. 
 
 ---
 ### Code Block + Explanation
@@ -62,3 +65,6 @@ window.showBookDetails = (id) => {
     const myModal = new bootstrap.Modal(document.getElementById('bookModal'));
     myModal.show();
 };
+
+```
+---  
