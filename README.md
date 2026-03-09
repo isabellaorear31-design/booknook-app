@@ -1,18 +1,17 @@
 # 💖 BookNook 
-A book discovery and tracking web app directly inspired by Goodreads.
+A book discovery and tracking web app directly inspired by Goodreads. Dedicated specifically to romance books. 
 
 ### Authorship & Attribution 
 * **Author:** Isabella O'Rear
 * **Resources:**
-    * [Goodreads](https://www.goodreads.com/): Main design inspiration for layout and primary source for book cover images.
-    * [Google Fonts](https://fonts.google.com/): Used for typography to create the "romance" aesthetic.
-    * [ChatGPT](https://chatgpt.com/): Used for generating book summaries and JavaScript logic assistance.
-    * [Microsoft Copilot](https://copilot.microsoft.com/): Assisted with CSS formatting and troubleshooting.
-    * [Barry Cumbie (Bearbot)](https://github.com/barrycumbie/bearbot): Primary reference for folder structure and authentication patterns.
-    * [Codecademy](https://www.codecademy.com/): Reference for JavaScript fundamentals.
-    * [W3Schools](https://www.w3schools.com/): Reference for CSS component styling and color hex codes.
-    * [Bootstrap 5.3](https://getbootstrap.com/): Framework for responsive design.
-
+    * [Goodreads](https://www.goodreads.com/): Used for images, as well as inspiration for app itself.
+    * [Google Fonts](https://fonts.google.com/): Used for fonts.
+    * [ChatGPT](https://chatgpt.com/): Used for book summaries and some Java help.
+    * [Microsoft Copilot](https://copilot.microsoft.com/): Helped with CSS/Java formatting.
+    * [Barry Cumbie (Bearbot)](https://github.com/barrycumbie/bearbot): Primary reference for Github layout.
+    * [Codecademy](https://www.codecademy.com/): Reference for Java.
+    * [W3Schools](https://www.w3schools.com/): Reference for styling and color hex codes.
+    
 ---
 
 >* **Tagline:** "Tracking the best in romance, from Forks to Mayfair."
@@ -20,19 +19,29 @@ A book discovery and tracking web app directly inspired by Goodreads.
 ### User Story
 As a romance book reader, I want to browse a curated collection of popular titles, search for specific authors, and save books I'm interested in to a "Want to Read" list so that I can easily track and remember what I wanted to read.
 
+---
+
 ### Links
 * **Repository:** [GitHub Repo](https://github.com/isabellaorear31-design/booknook-app)
-* **Live App:** [Deployed Site](https://isabellaorear31-design.github.io/booknook-app/)
-* **Design Evidence:** [Inspiration Screenshot](./docs/inspiration.png)
+* **App:** [Deployed Site](https://isabellaorear31-design.github.io/booknook-app/)
+* **Verification:** This app has been tested for responsiveness on iPhone 14 and Chrome Desktop.
+  
+---
+
+### Design Pics
+![Inspiration Screenshot](./docs/inspiration.png)
 
 ---
 
 ### Model & Inspiration Evidence
-I modeled my book cards and search functionality after **Goodreads**. I improved/made the design my own by adding a pink theme/aesthetic and I made a login wall so that it felt more personalized. 
+* **Design Evidence:** [Inspiration Screenshot](./docs/inspiration.png)
+I modeled my book cards and search functionality after **Goodreads**. I improved/made the design my own by adding a pink theme/romantic aesthetic and I made a login wall so that it felt more personalized. 
+
 
 ---
+
 ### Code Block + Explanation
-This snippet from `scripts/app.js` demonstrates how the app handles user interaction and data flow:
+This snippet from `scripts/app.js` connects the DOM to my data. 
 
 ```javascript
 window.showBookDetails = (id) => {
@@ -68,3 +77,8 @@ window.showBookDetails = (id) => {
 
 ```
 ---  
+
+### Architecture/Infrastructure
+* **Tools/Libraries:** [Bootstrap 5.3](https://getbootstrap.com/): Used for the responsive layout and grid.
+ **Note:** This is a front-end app fetching internal data for `data.js` file. It uses `sessionStorage` for login and `localStorage` to save the "Want to Read" list.
+  
