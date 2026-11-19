@@ -25,14 +25,14 @@
         const pass = document.getElementById('password').value;
 
         
-        if (pass.length > 0) {
-            console.log("Login Success: User '" + user + "' authenticated at " + new Date().toLocaleTimeString());
+       if (user.trim().length >= 3 && pass.length >= 6) {
             
-            sessionStorage.setItem("activeUser", user);
+            
+            sessionStorage.setItem("activeUser", user.trim());
             window.location.href = "../index.html"; 
         } else {
          
-            console.error("Login Failure: Attempt made with empty password field.");
+           alert("Username must be at least 3 characters and password at least 6 characters.");
         }
     };
     </script>
