@@ -27,7 +27,12 @@
         if(books.length === 0) {
             container.innerHTML = "<p class='italic-style text-muted'>Your list is empty!</p>";
         } else {
-            books.forEach(b => container.innerHTML += `<div class='list-group-item py-3'>💖 ${b}</div>`);
+            books.forEach(b => {
+    const item = document.createElement('div');
+    item.className = 'list-group-item py-3';
+    item.textContent = '💖 ' + b;
+    container.appendChild(item);
+});
         }
     </script>
 </body>
