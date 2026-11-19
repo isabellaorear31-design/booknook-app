@@ -18,6 +18,9 @@
         </div>
     </div>
     <script>
+        if (!sessionStorage.getItem("activeUser")) {
+    window.location.href = "login.html";
+}
         document.getElementById('user-tag').innerText = sessionStorage.getItem('activeUser') || "Guest";
         const container = document.getElementById('list-container');
         const books = JSON.parse(localStorage.getItem('wantToRead')) || [];
